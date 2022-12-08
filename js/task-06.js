@@ -9,7 +9,7 @@ function onBlur(evt) {
     console.log(valueInput.length);
     console.log(inputEl.dataset.length);
 
-    if (valueInput.length > inputEl.dataset.length) {
+    if (valueInput.length >= inputEl.dataset.length) {
         inputEl.classList.remove("invalid");
         inputEl.classList.add('valid');
     }

@@ -10,13 +10,14 @@ function onSubmit(evt) {
     const email = frmElements.email.value;
     const password = frmElements.password.value;
 
-    if (email==="" || password==="") alert("Будь ласка, введіть всі поля форми");
+    if (email==="" || password==="") {
+        alert("Будь ласка, введіть всі поля форми");
+    }
 
-    const formData = new FormData(evt.currentTarget);
-    formData.forEach ((value, name) => {
-        console.log ('name=',name);
-        console.log ('value=',value);
-    })
+    else {
+        const returnElements = {"email": email, "password": password };
+        console.log(returnElements);
 
-    form.reset();
+        form.reset();
+    }
 }
