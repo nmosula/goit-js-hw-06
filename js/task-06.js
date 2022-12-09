@@ -6,10 +6,7 @@ inputEl.addEventListener('blur', onBlur);
 function onBlur(evt) {
     const valueInput = evt.currentTarget.value;
 
-    console.log(valueInput.length);
-    console.log(inputEl.dataset.length);
-
-    if (valueInput.length >= inputEl.dataset.length) {
+    if (valueInput.length === Number(inputEl.dataset.length)) {
         inputEl.classList.remove("invalid");
         inputEl.classList.add('valid');
     }
